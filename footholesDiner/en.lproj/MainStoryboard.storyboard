@@ -1,23 +1,209 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="MLVViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg_wall.png" translatesAutoresizingMaskIntoConstraints="NO" id="o1w-fy-xvi"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="person.png" translatesAutoresizingMaskIntoConstraints="NO" id="rKY-G8-evC"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sign_theiOSdiner.png" translatesAutoresizingMaskIntoConstraints="NO" id="K1L-Z2-eWa"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="chalkboard.png" translatesAutoresizingMaskIntoConstraints="NO" id="GQQ-16-Vu4"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg_counter.png" translatesAutoresizingMaskIntoConstraints="NO" id="ytO-is-MEi"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="total_field.png" translatesAutoresizingMaskIntoConstraints="NO" id="xR9-r7-R4I"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="food_box.png" translatesAutoresizingMaskIntoConstraints="NO" id="mgD-bk-KcP"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1N-LX-NjW">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="6Xo-3a-sGY"/>
+                                    <constraint firstAttribute="height" constant="35" id="vEt-mN-2FK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="-1" backgroundImage="button_silver.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ibaRemoveItem:" destination="2" eventType="touchUpInside" id="YtG-Jg-Ooy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNp-rk-EAs">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="1g6-CW-iKJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="+1" backgroundImage="button_silver.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ibaAddItem:" destination="2" eventType="touchUpInside" id="vQF-50-P4p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0v-hO-sFh">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="button_arrow_left.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ibaLoadPreviousItem:" destination="2" eventType="touchUpInside" id="b1n-Bw-qo7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWh-vr-iZ6">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="button_arrow.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ibaLoadNextItem:" destination="2" eventType="touchUpInside" id="QOy-Ty-ybc"/>
+                                    <action selector="ibaLoadPreviousItem:" destination="2" eventType="touchUpInside" id="RGU-wn-3X1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4C-J3-gE4">
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Total" backgroundImage="total_field.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ibaCalculateTotal:" destination="2" eventType="touchUpInside" id="pq4-VR-WFN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="123" translatesAutoresizingMaskIntoConstraints="NO" id="Nbr-Tv-Ozn">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="Flm-7m-lvW"/>
+                                    <constraint firstAttribute="height" constant="168" id="Vh2-xm-Ay5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="UQo-z1-Ml3">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="D6m-wf-34M"/>
+                                    <constraint firstAttribute="width" constant="111" id="aq0-f5-twO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrF-bm-Rra">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cKP-34-l6x"/>
+                                    <constraint firstAttribute="width" constant="97" id="hfe-jp-Pc3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D4C-J3-gE4" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2UQ-hi-Knv"/>
+                            <constraint firstItem="DrF-bm-Rra" firstAttribute="centerX" secondItem="rKY-G8-evC" secondAttribute="centerX" type="default" id="5iE-eY-56p"/>
+                            <constraint firstItem="xR9-r7-R4I" firstAttribute="centerY" secondItem="DrF-bm-Rra" secondAttribute="centerY" type="default" id="5wZ-Bx-OxA"/>
+                            <constraint firstItem="e1N-LX-NjW" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="202" id="8SZ-AI-pLh"/>
+                            <constraint firstItem="K1L-Z2-eWa" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="178" id="9fq-hd-Lpt"/>
+                            <constraint firstItem="xR9-r7-R4I" firstAttribute="centerX" secondItem="DrF-bm-Rra" secondAttribute="centerX" type="default" id="D1Z-8P-M2u"/>
+                            <constraint firstItem="B0v-hO-sFh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="172" id="DfO-4E-q5c"/>
+                            <constraint firstItem="rKY-G8-evC" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="MjA-ao-b2a"/>
+                            <constraint firstAttribute="bottom" secondItem="UQo-z1-Ml3" secondAttribute="bottom" constant="41" id="OTJ-6H-30r"/>
+                            <constraint firstItem="K1L-Z2-eWa" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Rfe-of-2IA"/>
+                            <constraint firstItem="mgD-bk-KcP" firstAttribute="top" secondItem="e1N-LX-NjW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UCa-ki-P1h"/>
+                            <constraint firstItem="UQo-z1-Ml3" firstAttribute="trailing" secondItem="YNp-rk-EAs" secondAttribute="trailing" type="default" id="Yes-Mu-HNX"/>
+                            <constraint firstItem="o1w-fy-xvi" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="a7u-lx-Xvc"/>
+                            <constraint firstItem="YNp-rk-EAs" firstAttribute="top" secondItem="e1N-LX-NjW" secondAttribute="top" type="default" id="dpt-RC-JZy"/>
+                            <constraint firstItem="e1N-LX-NjW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="116" id="fZK-y5-qwZ"/>
+                            <constraint firstItem="DrF-bm-Rra" firstAttribute="baseline" secondItem="D4C-J3-gE4" secondAttribute="baseline" type="default" id="h8x-DA-mXo"/>
+                            <constraint firstItem="GQQ-16-Vu4" firstAttribute="bottom" secondItem="B0v-hO-sFh" secondAttribute="bottom" type="default" id="ikB-gW-FSR"/>
+                            <constraint firstItem="o1w-fy-xvi" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="kda-mt-5g8"/>
+                            <constraint firstItem="ytO-is-MEi" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="kiP-tw-6eY"/>
+                            <constraint firstAttribute="trailing" secondItem="rWh-vr-iZ6" secondAttribute="trailing" constant="131" id="nsc-3C-qUE"/>
+                            <constraint firstItem="GQQ-16-Vu4" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="o7e-KB-op2"/>
+                            <constraint firstAttribute="bottom" secondItem="D4C-J3-gE4" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ooA-lA-uAc"/>
+                            <constraint firstItem="rKY-G8-evC" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="pW1-aw-8NO"/>
+                            <constraint firstItem="ytO-is-MEi" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="qPN-ZS-YVJ"/>
+                            <constraint firstItem="Nbr-Tv-Ozn" firstAttribute="top" secondItem="3" secondAttribute="top" constant="43" id="u51-ya-d0c"/>
+                            <constraint firstItem="GQQ-16-Vu4" firstAttribute="centerX" secondItem="Nbr-Tv-Ozn" secondAttribute="centerX" type="default" id="v2A-sU-kgC"/>
+                            <constraint firstItem="rWh-vr-iZ6" firstAttribute="top" secondItem="B0v-hO-sFh" secondAttribute="top" type="default" id="wP8-ae-mhD"/>
+                            <constraint firstItem="mgD-bk-KcP" firstAttribute="top" secondItem="YNp-rk-EAs" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xFh-jB-uQA"/>
+                            <constraint firstItem="UQo-z1-Ml3" firstAttribute="centerX" secondItem="K1L-Z2-eWa" secondAttribute="centerX" type="default" id="xUd-0w-hcw"/>
+                            <constraint firstItem="GQQ-16-Vu4" firstAttribute="top" secondItem="3" secondAttribute="top" constant="23" id="yDQ-dE-ot5"/>
+                            <constraint firstItem="UQo-z1-Ml3" firstAttribute="centerX" secondItem="mgD-bk-KcP" secondAttribute="centerX" type="default" id="ymu-hc-pws"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="ibAddItemButton" destination="YNp-rk-EAs" id="i3r-QZ-jKV"/>
+                        <outlet property="ibChalkboardLabel" destination="Nbr-Tv-Ozn" id="tug-DF-Tsg"/>
+                        <outlet property="ibCurrentImageView" destination="UQo-z1-Ml3" id="il1-3d-kDM"/>
+                        <outlet property="ibCurrentItemLabel" destination="DrF-bm-Rra" id="ud8-5Q-zLv"/>
+                        <outlet property="ibNextItemButton" destination="rWh-vr-iZ6" id="VLe-qf-eVA"/>
+                        <outlet property="ibPreviousItemButton" destination="B0v-hO-sFh" id="cPV-3U-bo5"/>
+                        <outlet property="ibRemoveItemButton" destination="e1N-LX-NjW" id="Qyz-On-33G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="104" y="99"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg_counter.png" width="480" height="66"/>
+        <image name="bg_wall.png" width="480" height="320"/>
+        <image name="button_arrow.png" width="19" height="33"/>
+        <image name="button_arrow_left.png" width="19" height="33"/>
+        <image name="button_silver.png" width="45" height="27"/>
+        <image name="chalkboard.png" width="172" height="212"/>
+        <image name="food_box.png" width="143" height="123"/>
+        <image name="person.png" width="162" height="268"/>
+        <image name="sign_theiOSdiner.png" width="165" height="76"/>
+        <image name="total_field.png" width="134" height="51"/>
+    </resources>
+    <classes>
+        <class className="MLVViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MLVViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="ibaAddItem:"/>
+                <relationship kind="action" name="ibaCalculateTotal:"/>
+                <relationship kind="action" name="ibaLoadNextItem:"/>
+                <relationship kind="action" name="ibaLoadPreviousItem:"/>
+                <relationship kind="action" name="ibaRemoveItem:"/>
+                <relationship kind="outlet" name="ibAddItemButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="ibChalkboardLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ibCurrentImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="ibCurrentItemLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ibNextItemButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="ibPreviousItemButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="ibRemoveItemButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
