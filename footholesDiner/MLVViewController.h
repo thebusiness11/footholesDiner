@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MLVViewController : UIViewController
+@class MLVOrder;
+@interface MLVViewController : UIViewController {
+  int currentItemIndex;
+}
+
+@property (strong, nonatomic) NSMutableArray* inventory;
+@property (strong, nonatomic) MLVOrder* order;
 @property (weak, nonatomic) IBOutlet UIButton *ibRemoveItemButton;
 @property (weak, nonatomic) IBOutlet UIButton *ibAddItemButton;
 @property (weak, nonatomic) IBOutlet UIButton *ibPreviousItemButton;

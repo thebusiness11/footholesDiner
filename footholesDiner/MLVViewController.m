@@ -7,6 +7,8 @@
 //
 
 #import "MLVViewController.h"
+#import "MLVItem.h"
+#import "MLVOrder.h"
 
 @interface MLVViewController ()
 // initial commit
@@ -14,10 +16,14 @@
 
 @implementation MLVViewController
 
+@synthesize inventory;
+@synthesize order;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+  currentItemIndex = 0;
+  self.order = [MLVOrder new];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,6 +47,4 @@
 - (IBAction)ibaCalculateTotal:(id)sender {
 }
 
-- (IBAction)ibaLoadPreviousItem:(id)sender {
-}
 @end

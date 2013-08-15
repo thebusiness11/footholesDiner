@@ -182,28 +182,6 @@
         <image name="sign_theiOSdiner.png" width="165" height="76"/>
         <image name="total_field.png" width="134" height="51"/>
     </resources>
-    <classes>
-        <class className="MLVViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MLVViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="ibaAddItem:"/>
-                <relationship kind="action" name="ibaCalculateTotal:"/>
-                <relationship kind="action" name="ibaLoadNextItem:"/>
-                <relationship kind="action" name="ibaLoadPreviousItem:"/>
-                <relationship kind="action" name="ibaRemoveItem:"/>
-                <relationship kind="outlet" name="ibAddItemButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="ibChalkboardLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="ibCurrentImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="ibCurrentItemLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="ibNextItemButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="ibPreviousItemButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="ibRemoveItemButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
